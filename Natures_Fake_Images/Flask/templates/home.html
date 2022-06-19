@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fake-Image|Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+   <link href="/static/css/drug_style.css" rel="stylesheet">
+
+    <style>
+.tuber{left:0px;
+  font-size:35px;
+border:5px solid black;
+background-color:rgb(5, 2, 68);
+}
+ .start{
+  margin-right:100px;
+   }
+   body{width:90% ;}
+    .btn
+    {
+    font-weight:600;
+    font-size:25px;
+    padding:13%;
+    }
+ 
+    #buttons{
+    top: 45px;
+    width:20%;
+  }
+
+  .img{
+ position: absolute;
+  width: 111%;
+  height:100%;
+}
+.last{
+position:relative;
+}
+.content{
+  transform: translate(4.5%, -4%);
+margin-left:100px;
+margin-top:20%;
+}
+.btn-success{width:100px;
+height:100px;
+box-shadow: 5px 5px 5px #021505;
+}
+.btn-success:hover{background-color:green;
+}
+
+form{
+  text-align: center;
+width:50%;
+height:50%;
+
+}
+
+body
+{
+  margin:0;
+  padding:0;
+  background-color:#262636;
+  position: fixed;
+}
+
+h5{width:500px;}
+
+.result
+{
+width:50%;
+color:white;
+border:5px groove black;
+margin-left:2px;padding:5px;
+}
+.prediction{
+transform: translate(360px,-380px);
+margin-top: 10%;
+  width: 50%;
+height: 28%;
+}
+    </style>
+
+</head>
+<body>
+<div class="start">
+  <div class="body" >
+             <img class="img" src="static/css/images/6.jpg">
+                <div class="last">
+                    <div class="container-fluid">
+                    <h1 class="tuber jumbotron bg-primary">Welcome To Image Analysis Zone</h1>
+                        </div>
+<div id="buttons" class="btn-group-vertical">
+    <a class="side_button " href="/home"><button type="button" class="btn btn-primary active">Home</button></a>
+    <a class="side_button" href="/face"><button type="button" class="btn btn-primary">Face</button></a>
+    <a class="side_button" href="/cnn"><button type="button" class="btn btn-primary">CNN</button></a>
+     <a class="side_button" href="/graphs"><button type="button" class="btn btn-primary">Data Visualization </button></a>
+    <a class="side_button" href="/password"> <button type="button" class="btn btn-primary">Change Password</button></a>
+  <a class="side_button" href="/logout"> <button type="button" id="logout" class="btn btn-primary">Logout</button></a>
+</div>
+ <br><br>
+    <div class="content">
+     <center>
+     <form class="form-horizontal" style="margin-left: 120px;margin-top: 50px;" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-5" style="color:white; transform: translate(-58%,-55%); font-size: 23px;" for="pwd">Upload Your Image</label>
+      <div class="col-lg-6">
+        <input type="file" class="form-control" placeholder="Hours Studied"  required name="my_image" id="pwd">
+        {{ msg }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-6 col-sm-6">
+        <button style="width:80px;height:40px;" type="submit" class=" btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+
+	{% if prediction %}
+         <div class="prediction" style="margin-left:90px ;">
+  <img src="{{img_path}}" style="border: 2px groove black;" height="300px;width:25%";>
+	<h2 class="result">Prediction is : <b> {{prediction}} </b></h2>
+         </div>
+	{% endif %}
+
+                   <br>
+
+     </center>
+
+</div>
+</div>
+</div>
+  </div>
+</div>
+<script >
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

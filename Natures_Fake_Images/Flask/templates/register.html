@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake-Image|Register</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<style>
+		.error_mail{
+		color:red;
+		}
+		.tuber{
+         width:100%;
+          font-size:35px;
+          color:white;
+          padding: 8px 7px;
+          text-align:center;
+          font-weight:600;
+          font-family:Diplomata SC;
+          background-color:rgb(0, 0, 0);
+          position:sticky;
+           letter-spacing: 3px;
+         word-spacing:5px;
+         text-shadow: 3px 3px 8px rgb(250, 24, 182);
+           }
+           .body{
+overflow: hidden;
+  position: relative;
+}
+      .img{
+ position: absolute;
+  width: 100%;
+  height:100%;
+}
+.last{
+position:relative;
+}
+.card{background-color: rgba(0, 0, 0, 0.52);
+float: right;}
+
+	</style>
+</head>
+<body>
+<div class="body" >
+             <img class="img" src="static/css/images/1.jpg">
+                <div class="last">
+<h1 class="tuber">Register To Get Access</h1>
+
+<div class="container">
+<h2 class="text-center"><a href="http://bootstrap-ecommerce.com/"> </a></h2>
+<hr>
+
+
+<div class="row justify-content-right">
+<div class="col-md-6">
+<div class="card">
+<header class="card-header">
+	<a href="/" class="float-right btn btn-outline-primary mt-1">Log in</a>
+	<h4 class="card-title mt-2" style="color: bisque;">Sign up form</h4>
+</header>
+<article class="card-body">
+<form method="post">
+	<div class="form-row">
+		<div class="col form-group">
+			<label style="color: bisque;">FRIST NAME </label>
+		  	<input type="text" class="form-control" name="name" placeholder="Enter your name">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label style="color: bisque;">LAST NAME</label>
+		  	<input type="text" class="form-control" name="Last name" placeholder="Enter your last name">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+	<div class="form-group">
+		<label style="color: bisque;">Email Address</label>
+		<input type="email" class="form-control" name="Email" placeholder="">
+		<small class="form-text text-muted">We'll never share your email with anyone else.</small>
+		<h5 class="error_mail">{{msg}}</h5>
+	</div> <!-- form-group end.// -->
+	<div class="form-group">
+			<label class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="gender" value="option1">
+		  <span class="form-check-label" style="color: bisque;"> Male </span>
+		</label>
+		<label class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="gender" value="option2">
+		  <span class="form-check-label" style="color: bisque;"> Female</span>
+		</label>
+	</div> <!-- form-group end.// -->
+	<div class="form-row">
+		<div class="form-group col-md-6">
+		  <label style="color: bisque;">City</label>
+		  <input type="text" class="form-control">
+		</div> <!-- form-group end.// -->
+		<div class="form-group col-md-6">
+		  <label style="color: bisque;">Country</label>
+		  <select id="inputState" class="form-control">
+		    <option> Choose...</option>
+			<option>Afganistan</option>
+			  <option selected="">India</option>
+			  <option>England</option>
+			  <option>Russia</option>
+		      <option>Ukraine</option>
+			  <option>United States</option>     
+		  </select>
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row.// -->
+	<div class="form-group">
+		<label style="color: bisque;">Create password</label>
+	    <input class="form-control" name="Password" type="password">
+	</div> <!-- form-group end.// -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" style="color: bisque;"> Register  </button>
+    </div> <!-- form-group// -->
+    <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
+</form>
+</article> <!-- card-body end .// -->
+<div class="border-top card-body text-center" style="color: bisque;">Already Have an account? <a href="/">Log In</a></div>
+</div> <!-- card.// -->
+</div> <!-- col.//-->
+</div> <!-- row.//-->
+</div>
+</div>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
